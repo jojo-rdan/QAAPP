@@ -24,7 +24,7 @@ public class LoginPage extends BasePage{
     private WebElement password;
 
     @FindBy(css = "div.css-1rynq56.r-jwli3a.r-ubezar.r-vw2c0b.r-q4m81j")
-    private  WebElement LoginBtn;
+    private  WebElement loginBtn;
 
     @FindBy(xpath = "//div[contains(text(),'Please enter a valid email')]")
     private WebElement emailValidator;
@@ -44,4 +44,11 @@ public class LoginPage extends BasePage{
     public boolean isLoginDisplayed(){ return qaAppTittle.isDisplayed();}
     public boolean isEmailDisplayed(){return email.isDisplayed();}
     public boolean isPasswordDisplayed(){return password.isDisplayed();}
+    public void typeEmail(){typeOnInput(email, webData.getEmail());}
+    public void typePassword(){typeOnInput(password, webData.getPassword());}
+    public boolean isLoginButtonDisplayed(){return loginBtn.isDisplayed();}
+    public void clickOnLoginBtn(){clickElement(loginBtn);}
+    public boolean isEmailValidatorDisplayed(){return emailValidator.isDisplayed();}
+    public boolean isPasswordValidatorDisplayed(){return passwordValidator.isDisplayed();}
+
 }
