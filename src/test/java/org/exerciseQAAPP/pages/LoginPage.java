@@ -8,8 +8,14 @@ import org.openqa.selenium.support.FindBy;
 public class LoginPage extends BasePage{
     WebData webData = new WebData();
 
+    @FindBy(css = "button._1ghq36w7")
+    private WebElement webOption;
+
     @FindBy(css = "iframe._1ln5482")
     private WebElement iframe;
+
+    @FindBy(css = "div.css-1rynq56.r-jwli3a.r-1x35g6.r-vw2c0b.r-jgcjvd.r-117bsoe")
+    private WebElement qaAppTittle;
 
     @FindBy(css = "input[placeholder='Email']")
     private WebElement email;
@@ -29,4 +35,13 @@ public class LoginPage extends BasePage{
     public LoginPage(WebDriver driver) {
         super(driver);
     }
+
+    public void clickOnWebOption(){clickElement(webOption);};
+    public void goToIframe(){
+        super.waitForVisibility(iframe);
+        getDriver().switchTo().frame(iframe);
+    }
+    public boolean isLoginDisplayed(){ return qaAppTittle.isDisplayed();}
+    public boolean isEmailDisplayed(){return email.isDisplayed();}
+    public boolean isPasswordDisplayed(){return password.isDisplayed();}
 }
