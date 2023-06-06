@@ -1,6 +1,7 @@
 package org.exerciseQAAPP.tests.runners;
 
 
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
@@ -9,5 +10,5 @@ import io.cucumber.testng.CucumberOptions;
         glue = {"org.exerciseQAAPP.tests.steps.web"}
 )
 
-public class WebTests {
+public class WebTests extends AbstractTestNGCucumberTests {
 }

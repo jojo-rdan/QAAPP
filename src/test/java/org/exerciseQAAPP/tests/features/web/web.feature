@@ -7,5 +7,7 @@ Feature: Log In Functionality
   Scenario: Log In succesfully
 
     Given I am in the Log In page of the QA APP
-    When I Log In in my account
+    When I Log In into my account
     Then I should have entered my session
+    When I try to log out
+    Then I should be able to logout successfully
