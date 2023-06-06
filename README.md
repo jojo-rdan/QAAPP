@@ -1,4 +1,4 @@
-<h2>Final Exam TAE</h2>
+<h2>QA APP Exercise/h2>
 <br>
 <h4>This project contains test cases for the QA APP website and app.</h4>
 <br>
